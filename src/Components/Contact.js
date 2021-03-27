@@ -1,6 +1,66 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Contact extends Component {
+
+   state = {
+      name: "",
+      email: "",
+      subject: "",
+      message:""
+   } 
+   
+   handleChange = (event) => {
+      var nam = event.target.name;
+      var val = event.target.value;
+
+      this.setState({
+         [nam]: val
+      })
+     
+   }
+   
+    submitRequest = async (event) => {
+      event.preventDefault();
+       console.log(this.state);
+
+      //  const emai = this.state.email;
+      //  const mess = this.state.message;
+
+      axios({
+      method: "POST", 
+      url:"http://localhost:8080/access", 
+      data:  this.state
+      }).then((response) => {
+         console.log(response.status);
+      if (response.status === 200) {
+         alert("Message Sent."); 
+         document.getElementById('contactForm').reset();
+        } else if (response.data.status === 'fail') {
+        alert("Message failed to send.")
+      }
+    }) 
+
+      // const response = await fetch('http://localhost:8080/access', {
+      //    method: 'POST',
+      //    header: {
+      //       'Content-type': 'application/json'
+      //    },
+      //    body: JSON.stringify({ "hello": "world" })
+      // });
+       
+       
+      //  const resData = await response.json();
+         
+      //  if (resData.status === 'success') {
+      //     alert('Message Sent.');
+      //     this.resetForm()
+
+      //  } else if (resData.status === 'fail') {
+      //     alert('Message failed to sent');
+      //  }
+   }
+   
   render() {
 
     if(this.props.data){
@@ -36,39 +96,40 @@ class Contact extends Component {
          <div className="row">
             <div className="eight columns">
 
-               <form action="" method="post" id="contactForm" name="contactForm">
+               <form onSubmit={this.submitRequest} id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>
 						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
+                         <input type="text" defaultValue="" size="35" id="contactName" name="name" 
+                            onChange={this.handleChange}/>
                   </div>
 
                   <div>
 						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
+						   <input type="text" required defaultValue="" size="35" id="contactEmail" name="email" onChange={this.handleChange}/>
                   </div>
 
                   <div>
 						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
+						   <input type="text" defaultValue="" size="35" id="contactSubject" name="subject" onChange={this.handleChange}/>
                   </div>
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea cols="50" required rows="15" id="contactMessage" name="message" onChange={this.handleChange}></textarea>
                   </div>
 
                   <div>
                      <button className="submit">Submit</button>
-                     <span id="image-loader">
+                     {/* <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
-                     </span>
+                     </span> */}
                   </div>
 					</fieldset>
 				   </form>
 
-           <div id="message-warning"> Error boy</div>
+           <div id="message-warning">Error</div>
 				   <div id="message-success">
                   <i className="fa fa-check"></i>Your message was sent, thank you!<br />
 				   </div>

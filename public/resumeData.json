@@ -112,7 +112,10 @@
     {
       "skill": "MySQL",
       "imag": "iconfinder_MySQL_1012821.svg"
-
+    },
+    {
+      "skill": "NodeJs",
+      "imag": "iconfinder_nodejs-new-pantone-black_1012818.svg"
     }
     ],
 

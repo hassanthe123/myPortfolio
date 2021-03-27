@@ -904,6 +904,7 @@ call-to-action .button {
    width: 65%;
 }
 #contact input:focus,
+
 #contact textarea:focus,
 #contact select:focus {
 	color: #fff;
