@@ -29,22 +29,22 @@
       },
       {
         "name":"google-plus",
-        "url":"http://googleplus.com/tbakerx",
+        "url":"http://googleplus.com/",
         "className":"fa fa-google-plus"
       },
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
+        "url":"https://www.linkedin.com/in/",
         "className":"fa fa-linkedin"
       },
       {
         "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
+        "url":"http://instagram.com/",
         "className":"fa fa-instagram"
       },
       {
         "name":"github",
-        "url":"http://github.com/tbakerx",
+        "url":"http://github.com/",
         "className":"fa fa-github"
       },
       {
@@ -85,7 +85,7 @@
       "imag":"iconfinder_78-microsoft_4202105.svg"
     },
     {
-      "skill": "Window Server",
+      "skill": "Windows Server",
       "imag": "windows-server.svg"
 
     },
@@ -116,6 +116,10 @@
     {
       "skill": "NodeJs",
       "imag": "iconfinder_nodejs-new-pantone-black_1012818.svg"
+    }, 
+    {
+      "skill": "AWS",
+      "imag": "iconfinder_AWS_4923041.svg"
     }
     ],
 

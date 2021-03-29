@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 class Contact extends Component {
 
@@ -26,21 +27,40 @@ class Contact extends Component {
 
       //  const emai = this.state.email;
       //  const mess = this.state.message;
-
+      // http://contactnode-env.eba-kpfjmnmw.us-east-2.elasticbeanstalk.com/test
+       
       axios({
       method: "POST", 
-      url:"http://localhost:8080/access", 
+      url:"http://contactnode-env.eba-kpfjmnmw.us-east-2.elasticbeanstalk.com/test", 
       data:  this.state
       }).then((response) => {
          console.log(response.status);
       if (response.status === 200) {
-         alert("Message Sent."); 
+         Swal.fire(
+            {
+               icon: 'success',
+               title: 'Thank you, your email was sent!',
+               showConfirmButton: false,
+               timer: 2000
+            }
+         )
          document.getElementById('contactForm').reset();
-        } else if (response.data.status === 'fail') {
+         // document.getElementById('image-loader').hide();
+         // document.getElementById('message-warning').hide();
+         // document.getElementById('contactForm').hide();
+         // document.getElementById('message-success').fadeIn();  
+
+      } else if (response.status === 'fail') {
+         // document.getElementById('image-loader').fadOut();
+         // document.getElementById('message-warning').html(response.status);
+         // document.getElementById('message-warning').fadeIn();
         alert("Message failed to send.")
+         
       }
     }) 
 
+       
+       
       // const response = await fetch('http://localhost:8080/access', {
       //    method: 'POST',
       //    header: {
@@ -96,9 +116,10 @@ class Contact extends Component {
          <div className="row">
             <div className="eight columns">
 
-               <form onSubmit={this.submitRequest} id="contactForm" name="contactForm">
-					<fieldset>
+                {/* onSubmit={this.submitRequest} */}
 
+               <form  onSubmit={this.submitRequest} id="contactForm" name="contactForm">
+					<fieldset>
                   <div>
 						   <label htmlFor="contactName">Name <span className="required">*</span></label>
                          <input type="text" defaultValue="" size="35" id="contactName" name="name" 
@@ -122,9 +143,9 @@ class Contact extends Component {
 
                   <div>
                      <button className="submit">Submit</button>
-                     {/* <span id="image-loader">
+                     <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
-                     </span> */}
+                     </span>
                   </div>
 					</fieldset>
 				   </form>

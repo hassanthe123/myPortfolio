@@ -141,23 +141,23 @@
 
    //    $('#image-loader').fadeIn();
 
-   //    var contactName = $('#contactForm #contactName').val();
-   //    var contactEmail = $('#contactForm #contactEmail').val();
-   //    var contactSubject = $('#contactForm #contactSubject').val();
-   //    var contactMessage = $('#contactForm #contactMessage').val();
+   //    var name = $('#contactForm #contactName').val();
+   //    var email = $('#contactForm #contactEmail').val();
+   //    var subject = $('#contactForm #contactSubject').val();
+   //    var message = $('#contactForm #contactMessage').val();
 
-   //    var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-   //             '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
+   //    var data = 'name=' + name + '&email=' + email +
+   //             '&subject=' + subject + '&message=' + message;
 
    //    $.ajax({
 
 	//       type: "POST",
-	//       url: "inc/sendEmail.php",
+	//       url: "http://localhost:9000/app/",
 	//       data: data,
 	//       success: function(msg) {
 
    //          // Message was sent
-   //          if (msg == 'OK') {
+   //          if (msg === 'success') {
    //             $('#image-loader').fadeOut();
    //             $('#message-warning').hide();
    //             $('#contactForm').fadeOut();
