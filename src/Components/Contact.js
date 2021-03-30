@@ -28,10 +28,10 @@ class Contact extends Component {
       //  const emai = this.state.email;
       //  const mess = this.state.message;
       // http://contactnode-env.eba-kpfjmnmw.us-east-2.elasticbeanstalk.com/test
-       
+       //http://api.habdulledata.com/test
       axios({
       method: "POST", 
-      url:"http://contactnode-env.eba-kpfjmnmw.us-east-2.elasticbeanstalk.com/test", 
+      url:"http://api.habdulledata.com/test", 
       data:  this.state
       }).then((response) => {
          console.log(response.status);
