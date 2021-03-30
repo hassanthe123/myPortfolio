@@ -31,7 +31,7 @@ class Contact extends Component {
        //http://api.habdulledata.com/test
       axios({
       method: "POST", 
-      url:"http://api.habdulledata.com/test", 
+      url:"https://api.habdulledata.com/test", 
       data:  this.state
       }).then((response) => {
          console.log(response.status);
