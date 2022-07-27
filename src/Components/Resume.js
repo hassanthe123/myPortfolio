@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 class Resume extends Component {
   render() {
 
+
+
     if(this.props.data){
       var skillmessage = this.props.data.skillmessage;
       var education = this.props.data.education.map(function(education){
@@ -11,13 +13,28 @@ class Resume extends Component {
         <p>{education.description}</p></div>
       })
 
-      var work = this.props.data.work.map(function(work){
+      
+      var work = this.props.data.work.map(function (work, index) {
+        
+        var obj = Object.values(work);
+        var roleArr = obj[3];
+        
+        var roles = Object.keys(roleArr).map((key) => roleArr[key]);
+  
+        
+        console.log(roles.length)
+      
+        
         return <div key={work.company}><h3>{work.company}</h3>
             <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
-            <p>{work.description}</p>
+          
+          <div>
+            {roles.map((name, index) => <li key={index}>{name}</li>)}
+            </div>
+        
         </div>
       })
-
+     
       var itskills = this.props.data.it.map((skill) => {
         var skillimage = 'images/' + skill.imag;
         return <div className="itimages">
@@ -61,7 +78,6 @@ class Resume extends Component {
 
          <div className="nine columns main-col">
             {work}
-           
         </div>
     </div>
 
