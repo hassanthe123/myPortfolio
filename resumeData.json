@@ -1,0 +1,191 @@
+{
+  "main": {
+    "name":"Hassan Abdulle",
+    "occupation":"Network System Administrator",
+    "description":"Currently searching for a cloud based role ",
+    "image":"bot-img.jpeg",
+    "bio":"Hello there! I am tech enthusiast and I love dabling in different technologies! My passions includes learning how to solve problems using modern technology and also playing soccer! ",
+    "contactmessage":"Please contact me if you are interested in getting to know me further!",
+    "email": "hassanthe123@gmail.com",
+    "phone": "6475722082",
+    "address":{
+      "street":"250 Magnolia Drive",
+      "city":"Hamilton",
+      "state":"Ontario",
+      "zip": "L9C 6M3"
+    },
+    "website": "http://www.habdulle.com",
+    "resumedownload":"http://habdulle.com",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"N/A",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"google-plus",
+        "url":"http://googleplus.com/",
+        "className":"fa fa-google-plus"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"skype",
+        "url":"http://skype.com",
+        "className":"fa fa-skype"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Technologies",
+    "education":[
+      {
+        "school":"McMaster University",
+        "degree":"Bachelor in Computer Engineering",
+        "graduated":"JUNE 2019",
+        "description":"Completed the Computer Engineering bachelor degree which allowed me to obtain practical experience in both the software and hardware domain."
+      }
+      
+    ],
+    "work":[
+       {
+        "company":"Hub International",
+        "title":"System Administrator",
+        "years":"April 2021 - Current",
+        "description": ["Install and configure software and hardware",
+        "Manage Network servers",
+        "Setup accounts and workstations",
+        "Troubleshoot outages and VPN connection problems",
+        "Improve technical documentation and IT policies"
+      ]    
+        },
+      {
+        "company":"Apple, Inc",
+        "title":"Senior Apple Desktop Technician",
+        "years":"January 2019 - October 2020",
+        "description": ["Provide second level iOS and MacOS support",
+        "Managed Tier one and Tier 2 teams"
+      ]
+        
+        },
+      {
+        "company":"Ontario Power Generation",
+        "title":"Computer Engineer Intern",
+        "years":"Septerber 2016 - March 2017",
+        "description":[
+         "Assisted in developing database software which stored technical procedures",
+        "Improved design and usability of department website","Create and improve tecnhical documentation for employees"]
+      }
+    ],
+    "it":[{
+      "skill": "Microsoft Office",
+      "imag":"iconfinder_78-microsoft_4202105.svg"
+    },
+    {
+      "skill": "Windows Server",
+      "imag": "windows-server.svg"
+
+    },
+    {
+      "skill": "Linux",
+      "imag": "iconfinder_logo_brand_brands_logos_linux_2993682.svg"
+    },
+    {
+      "skill": "RedHat",
+      "imag":"iconfinder_276_Redhat_logo_4375058.svg"
+    },
+    {
+      "skill": "Cisco",
+      "imag": "iconfinder_cisco_294687.svg"
+    },
+    {
+      "skill": "Mac OS",
+      "imag": "iconfinder_-13_3057628.svg"
+    },
+    {
+      "skill": "iOS",
+      "imag": "iconfinder_social_ios_406089.svg"
+    },
+    {
+      "skill": "MySQL",
+      "imag": "iconfinder_MySQL_1012821.svg"
+    },
+    {
+      "skill": "NodeJs",
+      "imag": "iconfinder_nodejs-new-pantone-black_1012818.svg"
+    }, 
+    {
+      "skill": "AWS",
+      "imag": "iconfinder_AWS_4923041.svg"
+    }
+    ],
+
+    "skills":[
+      {
+        "name":"Git",
+        "level":"60%"
+      },
+      {
+        "name":"Python",
+        "level":"75%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"HTML5",
+        "level":"80%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"portfol.png",
+        "url":"http://www.habdulle.com"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user":"Kareem Abdul Jabbar"
+      },
+      {
+        "text":"He must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user":"Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
